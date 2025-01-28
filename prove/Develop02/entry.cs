@@ -6,7 +6,7 @@ class Entry
     public string _date = DateTime.Today.ToString("dd/MM/yyyy");
     public int _dayRating = 0;
 
-    public void generatePrompt()
+    public void GeneratePrompt()
     {
         Random rnd = new Random();
         int prompt_num = rnd.Next(5);
@@ -28,5 +28,34 @@ class Entry
         }
 
         Console.WriteLine($"Generated Prompt: '{_prompt}'");
+    }
+
+    public void WriteEntry()
+    {
+        GeneratePrompt();
+
+        Console.WriteLine();
+        Console.WriteLine($"{_date}");
+        Console.WriteLine($"{_prompt}: ");
+        _entry = Console.ReadLine();
+        Console.WriteLine();
+        RateDay();
+
+        Console.WriteLine("--Entry Recorded--");
+    }
+
+    public void RateDay()
+    {
+        Console.WriteLine("On a scale from [1 - 5] How would you rate your day?");
+        _dayRating = int.Parse(Console.ReadLine());
+    }
+    public void ReadEntry()
+    {
+        Console.WriteLine($"{_date}");
+        Console.WriteLine($"Q: {_prompt}: ");
+        Console.WriteLine();
+        Console.WriteLine($"{_entry}");
+        Console.WriteLine();
+        Console.WriteLine($"Your Day Rating was: {_dayRating}");
     }
 }

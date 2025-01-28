@@ -8,11 +8,10 @@ class Program
         Console.WriteLine("Hello Develop02 World!");
         Entry newEntry = new Entry();
 
-        newEntry.generatePrompt();
-        newEntry.generatePrompt();
-        newEntry.generatePrompt();
-        newEntry.generatePrompt();
-        newEntry.generatePrompt();
-        
+        newEntry.WriteEntry();
+
+        Console.WriteLine();
+        newEntry.ReadEntry();
+
     }
 }
