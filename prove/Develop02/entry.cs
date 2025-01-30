@@ -18,7 +18,7 @@ class Entry
             _prompt = "What is the first thing you are grabing if your house is burning?";
         } else if(prompt_num == 2)
         {
-            _prompt = "Where is your faveorite place to eat out?";
+            _prompt = "Where is your favorite place to eat out?";
         }else if(prompt_num == 3)
         {
             _prompt = "Who would win in a fight; Godzilla or King Kong?";

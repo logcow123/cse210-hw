@@ -6,12 +6,20 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Develop02 World!");
-        Entry newEntry = new Entry();
+        Entry myEntry1 = new Entry();
+        Entry myEntry2 = new Entry();
+        Journal myJournal = new Journal();
 
-        newEntry.WriteEntry();
+        myEntry1.WriteEntry();
+        myEntry2.WriteEntry();
 
-        Console.WriteLine();
-        newEntry.ReadEntry();
+        myJournal.AddEntry(myEntry1);
+        myJournal.AddEntry(myEntry2);
+
+        myJournal.DisplayEntries();
+        Console.WriteLine("---------GETTING ENTRY 0---------");
+        myJournal.GetEntry(0).ReadEntry();
+
 
     }
 }
