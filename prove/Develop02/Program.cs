@@ -28,7 +28,7 @@ class Program
                 case "1":
                     if(myJournal._name == "")
                     {
-                        Console.WriteLine("What is the name of your journal? ");
+                        Console.WriteLine("What is your name? ");
                         string journalName = Console.ReadLine();
                         myJournal.JournalName(journalName);
                     }
@@ -53,6 +53,10 @@ class Program
                     journalManager.SaveJournal(myJournal);
                     break;
                 case "6":
+                    Console.WriteLine("What is the name of your journal? ");
+                    string journalFile = Console.ReadLine();
+                    myJournal = journalManager.LoadJournal(journalFile);
+                    Console.WriteLine($"Loaded {myJournal._name}'s Journal");
                     break;
                 case "7":
                     continueWriting = false;
