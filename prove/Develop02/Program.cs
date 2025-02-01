@@ -38,11 +38,15 @@ class Program
                     break;
                 case "2":
                     myJournal.DisplayEntries();
+                    Console.WriteLine("Press 'ENTER' to continue");
+                    Console.ReadLine();
                     break;
                 case "3":
                     Console.Write("Enter Entry Index: ");
                     int entryIndex = int.Parse(Console.ReadLine());
                     myJournal.GetEntry(entryIndex).ReadEntry();
+                    Console.WriteLine("Press 'ENTER' to continue");
+                    Console.ReadLine();
                     break;
                 case "4":
                     Console.Write("Enter Entry Index: ");
@@ -51,12 +55,14 @@ class Program
                     break;
                 case "5":
                     journalManager.SaveJournal(myJournal);
+                    Console.WriteLine("------Journal Saved------");
                     break;
                 case "6":
                     Console.WriteLine("What is the name of your journal? ");
                     string journalFile = Console.ReadLine();
                     myJournal = journalManager.LoadJournal(journalFile);
                     Console.WriteLine($"Loaded {myJournal._name}'s Journal");
+                    Console.WriteLine("------Journal Loaded------");
                     break;
                 case "7":
                     continueWriting = false;
