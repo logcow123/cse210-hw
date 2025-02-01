@@ -1,9 +1,15 @@
 
+using System.Text.Json.Serialization;
+
 class Entry
 {
+    [JsonInclude]
     public string _prompt = "";
+    [JsonInclude]
     public string _entry = "";
+    [JsonInclude]
     public string _date = DateTime.Today.ToString("dd/MM/yyyy");
+    [JsonInclude]
     public int _dayRating = 0;
 
     public void GeneratePrompt()

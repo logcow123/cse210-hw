@@ -1,5 +1,10 @@
+using System.Text.Json.Serialization;
+
 class Journal
 {
+    [JsonInclude]
+    public string _name = "";
+    [JsonInclude]
     public List<Entry> _entries = new List<Entry>();
 
     public void AddEntry(Entry entry)
@@ -24,5 +29,9 @@ class Journal
             Console.WriteLine("========================================");
             entry.ReadEntry();
         }
+    }
+    public void JournalName(string name)
+    {
+        _name = name;
     }
 }
