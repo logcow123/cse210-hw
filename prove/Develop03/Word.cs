@@ -1,7 +1,23 @@
 class Word
 {
-    private string _word = "";
-    private bool _isHidden = false;
+    private string _word;
+    private bool _isHidden;
+
+    public Word(string theWord, bool isHidden)
+    {
+        _word = theWord;
+        _isHidden = isHidden;
+    }
+    public Word(string theWord)
+    {
+        _word = theWord;
+        _isHidden = false;
+    }
+    public Word()
+    {
+        _word = "_NULL_";
+        _isHidden = false;
+    }
     
     public void SetHidden(bool boolHidden)
     {
