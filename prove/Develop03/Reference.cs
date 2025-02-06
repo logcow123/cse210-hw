@@ -21,6 +21,10 @@ class Reference
         _verse = verse;
         _verseEnd = verseEnd;
     }
+    public Reference(string fullReference)
+    {
+        ParseReferefce(fullReference);
+    }
     public Reference()
     {
         _book = "Not Declared";
@@ -29,7 +33,7 @@ class Reference
         _verseEnd = -1;
     }
 
-    public void ParseReferefce(string referenceString) // This expects a string as such: "Proverbs 5:5-6" or "John 3:16" and save it in the reference
+    private void ParseReferefce(string referenceString) // This expects a string as such: "Proverbs 5:5-6" or "John 3:16" and save it in the reference
     {
         referenceString = referenceString + "%";        //This is an ending character to find the last number of the string
         string parseString = "";                        // this will be set to the book, chapter, and verses as a string
@@ -65,6 +69,23 @@ class Reference
             }
             
         }
+    }
+
+    public string GetBook()
+    {
+        return _book;
+    }
+    public int GetChapter()
+    {
+        return _chapter;
+    }
+    public int GetVerse()
+    {
+        return _verse;
+    }
+    public int GetEndVerse()
+    {
+        return _verseEnd;
     }
     public string GetFullReference()
     {

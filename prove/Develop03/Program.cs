@@ -15,9 +15,9 @@ class Program
 
         Console.WriteLine(myReference.GetFullReference());
 
-        myReference.ParseReferefce("Proverbs 5:6-7");
+        myReference = new Reference("Priverbs 5:6-10");
         Console.WriteLine($"Parsed Reference: {myReference.GetFullReference()}");
-        myReference.ParseReferefce("John 3:16");
+        myReference = new Reference("Bromethians 6:9");
         Console.WriteLine($"Parsed Reference: {myReference.GetFullReference()}");
 
 
