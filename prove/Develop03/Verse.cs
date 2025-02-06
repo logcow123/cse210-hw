@@ -60,4 +60,35 @@ class Verse
         }
         Console.WriteLine();
     }
+
+    public void HideWords(int numOfHidden)
+    {
+        Random rand = new Random();
+        int myrandom = -1;
+        while(numOfHidden > 1)
+        {
+            bool stillWorking = false;
+            foreach(Word word in _verseWords)
+            {
+                if(word.GetHidden() == false)
+                {
+                    stillWorking = true;
+                    myrandom = rand.Next(5);
+                    if(myrandom == 1)
+                    {
+                        word.SetHidden(true);
+                        if(numOfHidden == 0)
+                        {
+                            break;
+                        }
+                        numOfHidden = numOfHidden - 1;
+                    }
+                }
+            }
+            if(stillWorking == false)
+            {
+                break;
+            }
+        }
+    }
 }
