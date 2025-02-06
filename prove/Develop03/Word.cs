@@ -28,6 +28,10 @@ class Word
         _word = wordString;
     }
 
+    public bool GetHidden()
+    {
+        return _isHidden;
+    }
     public string GetWord()
     {
         if(_isHidden)           //checks if word is hidden, if so it will convert the string to a string of underscores

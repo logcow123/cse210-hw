@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks.Dataflow;
 
 class Verse
@@ -27,11 +28,24 @@ class Verse
         }
     }
 
+    public bool CheckAllHidden()
+    {
+        bool allHidden = true;              //This seems backwards but... This checks all the words and if it finds
+        foreach(Word word in _verseWords)   //at least one word that is not hidden it will return false
+        {
+            if(word.GetHidden() == false)
+            {
+                allHidden = false;
+            }
+        }
+        return allHidden;
+    }
     public void DisplayVerse()
     {
         foreach(Word word in _verseWords)
         {
             Console.Write($"{word.GetWord()} ");
         }
+        Console.WriteLine();
     }
 }

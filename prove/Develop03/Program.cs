@@ -10,6 +10,7 @@ class Program
         Verse myVerse = new Verse("This is my Verse!");
 
         myVerse.DisplayVerse();
+        Console.WriteLine($"are all the words hidden: {myVerse.CheckAllHidden()}");
         
     }
 }
