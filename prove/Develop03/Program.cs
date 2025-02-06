@@ -20,7 +20,7 @@ class Program
             {
                 break;
             }
-            myVerse.HideWords(5);
+            myVerse.HideWords(7);
             Console.Clear();
             myVerse.DisplayVerse();
         }
