@@ -30,7 +30,7 @@ class Word
 
     public string GetWord()
     {
-        if(_isHidden)
+        if(_isHidden)           //checks if word is hidden, if so it will convert the string to a string of underscores
         {
             string hiddenWord = "";
             foreach(char let in _word)

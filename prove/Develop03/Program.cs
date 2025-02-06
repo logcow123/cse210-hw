@@ -7,13 +7,9 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
-        Console.WriteLine("Hello Develop03 World!");
-        Word myWord = new Word("Hello", true);
+        Verse myVerse = new Verse("This is my Verse!");
 
-        Console.WriteLine($"Word: {myWord.GetWord()}");
+        myVerse.DisplayVerse();
         
-        myWord.SetHidden(false);
-
-        Console.WriteLine($"Word: {myWord.GetWord()}");
     }
 }
