@@ -1,11 +1,23 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks.Dataflow;
 
 class Verse
 {
+    private Reference _verseReference;
     private List<Word> _verseWords;
 
     public Verse(string verse)
+    {
+        _verseReference = new Reference();
+        ParseVerse(verse);
+    }
+    public Verse(string reference, string verse)
+    {
+        _verseReference = new Reference(reference);
+        ParseVerse(verse);
+    }
+    private void ParseVerse(string verse)
     {
         _verseWords = new List<Word>(); // creates the list of words
         verse = verse + " ";            // if the string doesn't end with a space it will still get the last word
@@ -27,7 +39,6 @@ class Verse
             }
         }
     }
-
     public bool CheckAllHidden()
     {
         bool allHidden = true;              //This seems backwards but... This checks all the words and if it finds
@@ -42,6 +53,7 @@ class Verse
     }
     public void DisplayVerse()
     {
+        Console.WriteLine(_verseReference.GetFullReference());
         foreach(Word word in _verseWords)
         {
             Console.Write($"{word.GetWord()} ");

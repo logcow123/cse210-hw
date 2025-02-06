@@ -3,7 +3,7 @@ class Word
     private string _word;
     private bool _isHidden;
 
-    public Word(string theWord, bool isHidden)
+    public Word(string theWord, bool isHidden) //The Constructors
     {
         _word = theWord;
         _isHidden = isHidden;

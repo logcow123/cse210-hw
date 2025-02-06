@@ -27,7 +27,7 @@ class Reference
     }
     public Reference()
     {
-        _book = "Not Declared";
+        _book = "NotDeclared";
         _chapter = -1;
         _verse = -1;
         _verseEnd = -1;

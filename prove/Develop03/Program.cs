@@ -7,18 +7,9 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
-        Verse myVerse = new Verse("This is my Verse!");
-        Reference myReference = new Reference();
-
+        Verse myVerse = new Verse("Bruh 5:1","This is my Verse!");
+        
         myVerse.DisplayVerse();
-        Console.WriteLine($"are all the words hidden: {myVerse.CheckAllHidden()}");
-
-        Console.WriteLine(myReference.GetFullReference());
-
-        myReference = new Reference("Priverbs 5:6-10");
-        Console.WriteLine($"Parsed Reference: {myReference.GetFullReference()}");
-        myReference = new Reference("Bromethians 6:9");
-        Console.WriteLine($"Parsed Reference: {myReference.GetFullReference()}");
 
 
         
