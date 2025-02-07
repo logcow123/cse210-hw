@@ -7,7 +7,8 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
-        Verse myVerse = new Verse("Bruh 5:1-2","This is my Verse! Here are a ton more words to show you an example of hiding words!");
+        ScriptureLibrary myLibrary = new ScriptureLibrary();
+        Verse myVerse = myLibrary.GetScripture();
         string userInput = "";
 
         myVerse.DisplayVerse();
@@ -19,6 +20,10 @@ class Program
             if(userInput == "quit")
             {
                 break;
+            }else if(userInput == "display all")
+            {
+                Console.Clear();
+                myLibrary.DisplayScriptures();
             }else if(userInput != "")                       //This section of code checks if the input is an integer and if so, will hide that many words
             {
                 try

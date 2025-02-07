@@ -37,12 +37,13 @@ class Reference
     {
         referenceString = referenceString + "%";        //This is an ending character to find the last number of the string
         string parseString = "";                        // this will be set to the book, chapter, and verses as a string
+        _book = "";                                     // this will start with a fresh book string
         bool hasMultiple = false;                       // this will determine if the string has multiple verses
         foreach(char let in referenceString)
         {  
             if(let == ' ')                              
             {
-                _book = parseString;
+                _book = _book + parseString;
                 parseString = "";
             }else if(let == ':')
             {
