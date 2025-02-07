@@ -15,7 +15,9 @@ class Program
         while(myVerse.CheckAllHidden() == false)
         {
             
-            Console.WriteLine("Press 'ENTER to contine or type 'quit' to quit or type a number to remove that many words");
+            Console.WriteLine("--Press 'ENTER to contine");
+            Console.WriteLine("--Type a number to remove that many words");
+            Console.WriteLine("--Type 'quit' to quit");
             userInput = Console.ReadLine();
             if(userInput == "quit")
             {
