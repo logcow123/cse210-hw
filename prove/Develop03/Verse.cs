@@ -17,7 +17,7 @@ class Verse
         _verseReference = new Reference(reference);
         ParseVerse(verse);
     }
-    private void ParseVerse(string verse)
+    private void ParseVerse(string verse)   //will make each word in a string into it's own class part of a list
     {
         _verseWords = new List<Word>(); // creates the list of words
         verse = verse + " ";            // if the string doesn't end with a space it will still get the last word
@@ -39,7 +39,7 @@ class Verse
             }
         }
     }
-    public bool CheckAllHidden()
+    public bool CheckAllHidden()   
     {
         bool allHidden = true;              //This seems backwards but... This checks all the words and if it finds
         foreach(Word word in _verseWords)   //at least one word that is not hidden it will return false
@@ -51,7 +51,7 @@ class Verse
         }
         return allHidden;
     }
-    public void DisplayVerse()
+    public void DisplayVerse()      //display the verse + the reference
     {
         Console.WriteLine(_verseReference.GetFullReference());
         foreach(Word word in _verseWords)

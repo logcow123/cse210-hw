@@ -1,6 +1,6 @@
 using System.Collections.Concurrent;
 
-class Reference
+class Reference         //have not found a use for this class but it is part of the design. I could just use a string for what I'm doing
 {
     private string _book;
     private int _chapter;
@@ -33,7 +33,7 @@ class Reference
         _verseEnd = -1;
     }
 
-    private void ParseReferefce(string referenceString) // This expects a string as such: "Proverbs 5:5-6" or "John 3:16" and save it in the reference
+    private void ParseReferefce(string referenceString) // This expects a string as such: "Proverbs 3:5-6" or "John 3:16" and save it in the reference
     {
         referenceString = referenceString + "%";        //This is an ending character to find the last number of the string
         string parseString = "";                        // this will be set to the book, chapter, and verses as a string

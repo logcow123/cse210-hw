@@ -14,7 +14,7 @@ class Program
         myVerse.DisplayVerse();
         while(myVerse.CheckAllHidden() == false)
         {
-            
+            Console.WriteLine();
             Console.WriteLine("--Press 'ENTER to contine");
             Console.WriteLine("--Type a number to remove that many words");
             Console.WriteLine("--Type 'quit' to quit");
@@ -38,7 +38,8 @@ class Program
                 {
                     Console.Clear();
                     myVerse.DisplayVerse();
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                    Console.WriteLine($"{e.Message}");
                 }   
             }else                //Default will be 3 words removed
             {
