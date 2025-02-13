@@ -64,7 +64,7 @@ class Verse
     public void HideWords(int numOfHidden)          //This will take some explaining
     {                                               //This class takes in an interger and hides that many number of words
         Random rand = new Random();
-        int myrandom = -1;
+        int myrandom;
         while(numOfHidden > 0)                      //This loops until all the words are hidden that can be
         {
             bool stillWorking = false;              //This will stop an infinate loop if all the words are hidden while numOfHidden > 0(Line 89)
