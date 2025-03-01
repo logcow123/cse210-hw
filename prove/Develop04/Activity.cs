@@ -20,11 +20,14 @@ class Activity
         _startMsg = startMsg;
     }
 
-    public void setDuration(double duration)
+    public void SetDuration(double duration)
     {
         _mainTimer.setDuration(duration);
     }
-    
+    public double Duration()
+    {
+        return _mainTimer.getDuration();
+    }
     public void StartActivity()
     {
         Console.WriteLine($"Welcome to the {_activityName} Activity");
@@ -32,7 +35,7 @@ class Activity
         Console.WriteLine(_startMsg);
         Console.WriteLine();
         Console.Write("How long, in seconds, would you like your session: ");
-        setDuration(double.Parse(Console.ReadLine()));
+        SetDuration(double.Parse(Console.ReadLine()));
         Console.Clear();
         Console.WriteLine("Get Ready...");
         theLoader.load(5);
