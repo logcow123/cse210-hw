@@ -1,0 +1,4 @@
+Points, 75
+Simple, My First Goal, my First Goal, 100, False
+Check, My List Goal, this is a list, 50, False, 5, 1, 100
+Eternal, My Eternal Goal, this will alst forever, 25, False
