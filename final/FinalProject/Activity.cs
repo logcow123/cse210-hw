@@ -8,7 +8,6 @@ abstract class Activity
     {
         _mainTimer.setDuration(20);
         _startMsg = "N/A";
-
     }
 
     public Activity(string name , string startMsg)

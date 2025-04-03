@@ -37,6 +37,16 @@ class Scale
         return scale;
     }
 
+    public void DisplayScale()
+    {
+        foreach(string note in GetScale())
+        {
+            Console.Write(note);
+            Console.Write(" ");
+        }
+        Console.Write("\n");
+    }
+
     public string GetRandomNoteAll()
     {
         Random random = new Random();
